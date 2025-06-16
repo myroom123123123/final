@@ -6,6 +6,45 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <RootNamespace>WpfApp5</RootNamespace>
+        <!-- Вимикаємо автоматичне підключення XAML файлів -->
+        <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+        <EnableDefaultPageItems>false</EnableDefaultPageItems>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="supabase-csharp" Version="0.16.2" />
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+      <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc2" />
+      <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+      <PackageReference Include="Material.Icons.WPF" Version="2.1.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    </ItemGroup>
+
+    <!-- Настройка XAML файлов -->
+    <ItemGroup>
+      <ApplicationDefinition Include="App.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </ApplicationDefinition>
+      <Compile Include="App.xaml.cs" DependentUpon="App.xaml" />
+      <Compile Include="AssemblyInfo.cs" />
+      <Compile Include="MainWindow.xaml.cs" DependentUpon="MainWindow.xaml" />
+      <Compile Include="Converters\**\*.cs" />
+      <Compile Include="Models\**\*.cs" />
+      <Compile Include="Services\**\*.cs" />
+      <Compile Include="TestData\**\*.cs" />
+      <Compile Include="ViewModels\**\*.cs" />
+      <Compile Include="Views\**\*.xaml.cs" DependentUpon="%(Filename)" />
+      <Page Include="MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Include="Views\**\*.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
 
 </Project>
