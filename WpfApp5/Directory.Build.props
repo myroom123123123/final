@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <!-- Включаємо тільки файли з Models, Services, ViewModels, якщо вони знаходяться в корені проекту -->
+    <Compile Include="Models\**\*.cs" />
+    <Compile Include="Services\**\*.cs" />
+    <Compile Include="ViewModels\**\*.cs" />
+    <!-- Не підключаємо XAML-файли явно, щоб уникнути дублювання ApplicationDefinition/Page -->
+  </ItemGroup>
+  <PropertyGroup>
+    <!-- Вимикаємо автоматичне включення Compile, щоб не було дублікатів -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <!-- Вимикаємо автоматичне включення Page, щоб не було дублікатів XAML -->
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+  </PropertyGroup>
+</Project>

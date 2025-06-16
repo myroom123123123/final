@@ -49,6 +49,32 @@
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "LiveChartsCore.SkiaSharpView.WPF": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.4.10, )"
+            },
+            "Material.Icons.WPF": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "supabase-csharp": {
+              "target": "Package",
+              "version": "[0.16.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
