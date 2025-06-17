@@ -57,6 +57,8 @@ public partial class MainWindow : MetroWindow
                 
                 // Скидаємо повідомлення про помилки
                 viewModel.LoginErrorMessage = string.Empty;
+                viewModel.EmailErrorMessage = string.Empty;
+                viewModel.PasswordErrorMessage = string.Empty;
                 
                 // Валідація та спроба входу
                 if (string.IsNullOrWhiteSpace(viewModel.Email))
@@ -79,25 +81,8 @@ public partial class MainWindow : MetroWindow
                 viewModel.StatusMessage = "Виконується вхід...";
                 Console.WriteLine("Початок процесу входу...");
                 
-                // Викликаємо метод входу з UserService через публічну властивість
-                var user = await viewModel.UserService.LoginAsync(viewModel.Email, PasswordBox.Password);
-                
-                Console.WriteLine($"Результат входу: {(user != null ? "Успішно" : "Не вдалося увійти")}");
-                
-                if (user == null)
-                {
-                    viewModel.LoginErrorMessage = "Неправильний email або пароль";
-                    viewModel.StatusMessage = "Помилка входу: неправильний email або пароль";
-                    Console.WriteLine("Помилка: Неправильний email або пароль");
-                    return;
-                }
-                
-                // Очищення пароля після успішного входу
-                PasswordBox.Password = string.Empty;
-                viewModel.Password = string.Empty;
-                
-                viewModel.StatusMessage = "Вхід виконано успішно";
-                Console.WriteLine($"Успішний вхід користувача: {user.FullName}, Email: {user.Email}, Роль: {user.Role}");
+                // Замість окремого виклику сервісу використовуємо метод LoginAsync з ViewModel
+                await viewModel.ManualLoginAsync();
             }
             catch (Exception ex)
             {

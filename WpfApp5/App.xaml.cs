@@ -50,7 +50,15 @@ public partial class App : Application
             
             // Запускаємо головне вікно
             var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+            var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
+            
+            // Явно встановлюємо DataContext
+            mainWindow.DataContext = mainViewModel;
+            
             mainWindow.Show();
+            
+            // Ініціалізуємо стартові значення
+            mainViewModel.StatusMessage = "Програма готова до роботи";
         }
         catch (Exception ex)
         {
