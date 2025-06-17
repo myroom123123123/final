@@ -1,15 +1,15 @@
-# Игнорировать файлы вне проекта WpfApp5
+# Ігнорувати файли поза проектом WpfApp5
 /Models/
 /Services/
 /ViewModels/
 /Views/
 
-# Не игнорировать файлы в папке проекта
+# Не ігнорувати файли в папці проекту
 !/WpfApp5/Models/
 !/WpfApp5/Services/
 !/WpfApp5/ViewModels/
 !/WpfApp5/Views/
 
-# Файлы сборки
+# Файли збірки
 bin/
 obj/

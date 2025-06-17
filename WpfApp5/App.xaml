@@ -8,21 +8,21 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- MahApps.Metro ресурсы -->
+                <!-- MahApps.Metro ресурси -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
                 
-                <!-- Кастомные стили -->
+                <!-- Користувацькі стилі -->
                 <ResourceDictionary>
-                    <!-- Конвертеры -->
+                    <!-- Конвертери -->
                     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
                     <conv:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
                     <conv:EnumToVisibilityConverter x:Key="EnumToVisibilityConverter" />
                     <conv:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
                     <conv:UrlToImageConverter x:Key="UrlToImageConverter" />
                     
-                    <!-- Цвета -->
+                    <!-- Кольори -->
                     <Color x:Key="PrimaryColor">#1976D2</Color>
                     <Color x:Key="AccentColor">#2196F3</Color>
                     <Color x:Key="BackgroundColor">#F5F5F5</Color>
@@ -30,7 +30,7 @@
                     <Color x:Key="TextSecondaryColor">#757575</Color>
                     <Color x:Key="BorderColor">#BDBDBD</Color>
                     
-                    <!-- Кисти -->
+                    <!-- Пензлі -->
                     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
                     <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}"/>
                     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}"/>
@@ -38,7 +38,7 @@
                     <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}"/>
                     <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}"/>
                     
-                    <!-- Стили кнопок -->
+                    <!-- Стилі кнопок -->
                     <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource MahApps.Styles.Button}">
                         <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
                         <Setter Property="Foreground" Value="White"/>
@@ -58,7 +58,7 @@
                         <Setter Property="controls:ControlsHelper.CornerRadius" Value="4"/>
                     </Style>
                     
-                    <!-- Стили текстовых полей -->
+                    <!-- Стилі текстових полів -->
                     <Style x:Key="TextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource MahApps.Styles.TextBox}">
                         <Setter Property="Margin" Value="5"/>
                         <Setter Property="Padding" Value="10,8"/>
@@ -71,7 +71,7 @@
                         <Setter Property="controls:ControlsHelper.CornerRadius" Value="4"/>
                     </Style>
                     
-                    <!-- Стили заголовков -->
+                    <!-- Стилі заголовків -->
                     <Style x:Key="HeaderText" TargetType="TextBlock">
                         <Setter Property="FontSize" Value="22"/>
                         <Setter Property="FontWeight" Value="SemiBold"/>
@@ -86,7 +86,7 @@
                         <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
                     </Style>
                     
-                    <!-- Стиль карточки -->
+                    <!-- Стиль картки -->
                     <Style x:Key="CardPanel" TargetType="Border">
                         <Setter Property="Background" Value="White"/>
                         <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
@@ -101,14 +101,14 @@
                         </Setter>
                     </Style>
                     
-                    <!-- Стиль иконок -->
+                    <!-- Стиль іконок -->
                     <Style x:Key="IconStyle" TargetType="materialIcons:MaterialIcon">
                         <Setter Property="Width" Value="24"/>
                         <Setter Property="Height" Value="24"/>
                         <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
                     </Style>
                     
-                    <!-- Стиль меню навигации -->
+                    <!-- Стиль меню навігації -->
                     <Style x:Key="NavButton" TargetType="Button" BasedOn="{StaticResource MahApps.Styles.Button}">
                         <Setter Property="Background" Value="Transparent"/>
                         <Setter Property="BorderThickness" Value="0"/>
